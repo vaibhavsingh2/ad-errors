@@ -11,15 +11,33 @@ import {
   Keyboard,
   Platform
 } from "react-native";
-
+import {AdMobBanner} from 'react-native-admob';
 const isAndroid = Platform.OS == "android";
 const viewPadding = 10;
 
 export default class TodoList extends Component {
   state = {
     tasks: [],
-    text: ""
+    text: "",
+    
   };
+  
+ // componentDidMount(){
+   // this.renderAdd() }
+renderAdd(){
+    
+        return(
+            <View style={{flex:1}}>
+                <AdMobBanner
+                adSize="banner"
+                adUnitID="app-id"
+                testDeviceID="EMULATOR"
+                didFailToReceiveAdWithError={this.bannerError} />
+            </View>
+        );
+  
+}
+
 
   changeTextHandler = text => {
     this.setState({ text: text });
@@ -75,6 +93,11 @@ export default class TodoList extends Component {
       <View
         style={[styles.container, { paddingBottom: this.state.viewMargin }, {backgroundColor: "#b8b811"}]}
       >
+        <AdMobBanner
+                adSize="banner"
+                adUnitID="ca-app-pub-6268407821278608~9156268355"
+                testDeviceID="EMULATOR"
+                didFailToReceiveAdWithError={this.bannerError} />
      <Text style={{backgroundColor: "yellow"}}> To-do-list </Text>
       
         <FlatList
