@@ -15,7 +15,8 @@
     "react-dom": "^16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
     "react-native-admob": "^2.0.0-beta.6",
-    "react-native-web": "~0.11.7"
+    "react-native-web": "~0.11.7",
+    "expo-ads-admob": "~8.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
